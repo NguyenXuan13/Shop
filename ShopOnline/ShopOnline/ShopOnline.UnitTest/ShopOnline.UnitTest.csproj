@@ -52,6 +52,28 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShopOnline.Common\ShopOnline.Common.csproj">
+      <Project>{4825193f-f25f-416e-901d-578419cc311b}</Project>
+      <Name>ShopOnline.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopOnline.Data\ShopOnline.Data.csproj">
+      <Project>{c1f53eb0-e1aa-487e-ba73-d519b6eb2efa}</Project>
+      <Name>ShopOnline.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopOnline.Model\ShopOnline.Model.csproj">
+      <Project>{d110ae34-6e51-4858-989e-b090cab8e28c}</Project>
+      <Name>ShopOnline.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopOnline.Service\ShopOnline.Service.csproj">
+      <Project>{b102bb72-310e-4442-9ff3-04e04bd3c291}</Project>
+      <Name>ShopOnline.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopOnline.Web\ShopOnline.Web.csproj">
+      <Project>{7e3f9edc-158e-4c96-a36b-272106a56999}</Project>
+      <Name>ShopOnline.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
