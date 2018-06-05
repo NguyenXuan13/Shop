@@ -5,7 +5,7 @@ namespace ShopOnline.Data
 {
     public class ShopOnlineDbContext : DbContext
     {
-        public ShopOnlineDbContext() : base("TeduShopConnection")
+        public ShopOnlineDbContext() : base("ShopOnlineConnection")
         {
             this.Configuration.LazyLoadingEnabled = false;
         }
