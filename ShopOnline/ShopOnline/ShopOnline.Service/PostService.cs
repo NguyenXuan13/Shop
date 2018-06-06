@@ -1,4 +1,4 @@
-﻿using ShopOnline.Data.Infracstructes;
+﻿using ShopOnline.Data.Infrastructure;
 using ShopOnline.Data.Repositories;
 using ShopOnline.Model.Models;
 using System.Collections.Generic;
