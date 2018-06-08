@@ -1,5 +1,7 @@
-﻿(function () {
-    angular.module('tedushop', ['tedushop.products', 'tedushop.common']).config(config);
+﻿/// <reference path="/Assets/admin/libs/angular/angular.js" />
+
+(function () {
+    angular.module('shoponline', ['shoponline.products', 'shoponline.common']).config(config);
 
     config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
