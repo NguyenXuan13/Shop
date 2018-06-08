@@ -1,4 +1,4 @@
-﻿using ShopOnline.Data.Infracstructes;
+﻿using ShopOnline.Data.Infrastructure;
 using ShopOnline.Model.Models;
 
 namespace ShopOnline.Data.Repositories
