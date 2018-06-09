@@ -10,9 +10,40 @@ namespace ShopOnline.Web.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            return View();
+        }
+
+        [ChildActionOnly]
+        public ActionResult Footer()
+        {
+            return PartialView();
+        }
+
+        [ChildActionOnly]
+        public ActionResult Header()
+        {
+            return PartialView();
+        }
+
+        [ChildActionOnly]
+        public ActionResult Category()
+        {
+            return PartialView();
+        }
+
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your application description page.";
 
             return View();
         }
+
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
     }
 }
