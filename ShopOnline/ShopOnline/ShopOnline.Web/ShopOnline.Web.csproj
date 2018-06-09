@@ -190,10 +190,15 @@
     <Folder Include="Assets\admin\libs\checklist-model\test\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\AccountController.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Api\PostCategoryController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
@@ -228,7 +233,6 @@
     <Content Include="app\components\product_categories\productCategoryListController.js" />
     <Content Include="app\components\product_categories\productCategoryListView.html" />
     <Content Include="app\shared\modules\shoponline.common.js" />
-    <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Assets\admin\css\AdminLTE.css" />
     <Content Include="Assets\admin\css\AdminLTE.min.css" />
     <Content Include="Assets\admin\css\custom.css" />
@@ -4490,15 +4494,13 @@
     <Content Include="Assets\admin\libs\slimScroll\bower.json" />
     <Content Include="Assets\admin\libs\slimScroll\package.json" />
     <Content Include="Assets\admin\libs\slimScroll\README.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Admin\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include=".bowerrc" />
+    <Content Include="Assets\admin\templates\ProductImportTemplate.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bower.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".bowerrc" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\admin\libs\angular-chart.js\.bower.json" />
