@@ -50,9 +50,9 @@ namespace ShopOnline.Service
         {
             var product = _productRepository.Add(Product);
             _unitOfWork.Commit();
-            if (!string.IsNullOrEmpty(Product.Tags))
+            if (!string.IsNullOrEmpty(product.Tags))
             {
-                string[] tags = Product.Tags.Split(',');
+                string[] tags = product.Tags.Split(',');
                 for (var i = 0; i < tags.Length; i++)
                 {
                     var tagId = StringHelper.ToUnsignString(tags[i]);
