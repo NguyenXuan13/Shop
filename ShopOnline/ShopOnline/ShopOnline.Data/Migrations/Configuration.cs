@@ -47,9 +47,11 @@
             //var adminUser = manager.FindByEmail("hoangtv.mta@gmail.com");
 
             //manager.AddToRoles(adminUser.Id, new string[] { "Admin", "User" });
+
+            //manager.AddToRoles(adminUser.Id, new string[] { "Admin", "User" });
         }
 
-        private void CreateProductCategorySample(ShopOnline.Data.ShopOnlineDbContext context)
+    private void CreateProductCategorySample(ShopOnline.Data.ShopOnlineDbContext context)
         {
             if (context.ProductCategories.Count() == 0)
             {
