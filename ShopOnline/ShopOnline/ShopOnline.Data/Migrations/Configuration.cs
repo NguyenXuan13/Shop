@@ -19,36 +19,36 @@
         protected override void Seed(ShopOnline.Data.ShopOnlineDbContext context)
         {
             CreateProductCategorySample(context);
-            //    //  This method will be called after migrating to the latest version.
+            //  This method will be called after migrating to the latest version.
 
-            //    var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ShopOnlineDbContext()));
+            //var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ShopOnlineDbContext()));
 
-            //    var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ShopOnlineDbContext()));
+            //var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ShopOnlineDbContext()));
 
-            //    var user = new ApplicationUser()
-            //    {
-            //        UserName = "hoang",
-            //        Email = "hoangtv.mta@gmail.com",
-            //        EmailConfirmed = true,
-            //        BirthDay = DateTime.Now,
-            //        FullName = "Truong Viet Hoang"
+            //var user = new ApplicationUser()
+            //{
+            //    UserName = "hoang",
+            //    Email = "hoangtv.mta@gmail.com",
+            //    EmailConfirmed = true,
+            //    BirthDay = DateTime.Now,
+            //    FullName = "Truong Viet Hoang"
 
-            //    };
+            //};
 
-            //    manager.Create(user, "zxc123");
+            //manager.Create(user, "zxc123");
 
-            //    if (!roleManager.Roles.Any())
-            //    {
-            //        roleManager.Create(new IdentityRole { Name = "Admin" });
-            //        roleManager.Create(new IdentityRole { Name = "User" });
-            //    }
+            //if (!roleManager.Roles.Any())
+            //{
+            //    roleManager.Create(new IdentityRole { Name = "Admin" });
+            //    roleManager.Create(new IdentityRole { Name = "User" });
+            //}
 
-            //    var adminUser = manager.FindByEmail("hoangtv.mta@gmail.com");
+            //var adminUser = manager.FindByEmail("hoangtv.mta@gmail.com");
 
-            //    manager.AddToRoles(adminUser.Id, new string[] { "Admin", "User" });
+            //manager.AddToRoles(adminUser.Id, new string[] { "Admin", "User" });
 
         }
-    private void CreateProductCategorySample(ShopOnline.Data.ShopOnlineDbContext context)
+        private void CreateProductCategorySample(ShopOnline.Data.ShopOnlineDbContext context)
         {
             if (context.ProductCategories.Count() == 0)
             {
