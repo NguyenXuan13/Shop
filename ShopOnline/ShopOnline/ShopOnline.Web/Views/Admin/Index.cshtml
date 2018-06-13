@@ -13,7 +13,9 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
+    <link href="~/Assets/admin/libs/toastr/toastr.css" rel="stylesheet" />
     <link rel="stylesheet" href="/Assets/admin/css/AdminLTE.min.css">
+    <link href="~/Assets/admin/css/custom.css" rel="stylesheet" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="/Assets/admin/css/skins/_all-skins.min.css">
@@ -24,7 +26,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="hold-transition skin-blue sidebar-mini" ng-app="shoponline">
+<body class="hold-transition skin-blue sidebar-mini" ng-app="tedushop">
     <!-- Site wrapper -->
     <div class="wrapper">
         <header class="main-header">
@@ -516,7 +518,10 @@
     <script src="~/Assets/admin/libs/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="~/Assets/admin/libs/toastr/toastr.js"></script>
     <script src="~/Assets/admin/libs/bootbox/bootbox.js"></script>
+    <script src="~/Assets/admin/libs/ckeditor/ckeditor.js"></script>
+    <script src="~/Assets/admin/libs/ckfinder/ckfinder.js"></script>
     <script src="~/Assets/admin/libs/ngBootbox/ngBootbox.js"></script>
+    <script src="~/Assets/admin/libs/ng-ckeditor/ng-ckeditor.js"></script>
     <script src="~/app/shared/modules/tedushop.common.js"></script>
     <script src="~/app/shared/filters/statusFilter.js"></script>
     <script src="~/app/shared/services/apiService.js"></script>
@@ -531,7 +536,8 @@
     <script src="~/app/components/products/productAddController.js"></script>
     <script src="~/app/components/product_categories/productCategoryEditController.js"></script>
     <script src="~/app/components/products/productListController.js"></script>
-    <script src="~/app/components/home/homeController.js"></script>s
+    <script src="~/app/components/home/homeController.js"></script>
+    <script src="~/app/components/products/productEditController.js"></script>
 
 </body>
 </html>
