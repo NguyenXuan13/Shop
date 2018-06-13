@@ -25,7 +25,7 @@
             });
         }
         function UpdateProduct() {
-            apiService.put('api/product/update', $scope.product,
+            apiService.put('/api/product/update', $scope.product,
                 function (result) {
                     notificationService.displaySuccess(result.data.Name + ' đã được cập nhật.');
                     $state.go('products');

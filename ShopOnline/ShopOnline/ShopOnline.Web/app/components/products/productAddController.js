@@ -27,6 +27,7 @@
                     notificationService.displaySuccess(result.data.Name + ' đã được thêm mới.');
                     $state.go('products');
                 }, function (error) {
+                    notificationService.displayError('Thêm mới không thành công.');
                 });
         }
         function loadProductCategory() {

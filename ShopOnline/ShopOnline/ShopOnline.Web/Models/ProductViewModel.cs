@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 
 namespace ShopOnline.Web.Models
 {
@@ -45,8 +48,8 @@ namespace ShopOnline.Web.Models
         public string MetaDescription { set; get; }
 
         public bool Status { set; get; }
-        public string Tags { set; get; }
 
+        public string Tags { set; get; }
         public virtual ProductCategoryViewModel ProductCategory { set; get; }
     }
 }

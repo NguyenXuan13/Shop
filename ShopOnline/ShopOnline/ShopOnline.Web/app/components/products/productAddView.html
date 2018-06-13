@@ -1,4 +1,4 @@
-﻿  <!-- Content Header (Page header) -->
+﻿ <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
         Thêm mới sản phẩm
@@ -27,6 +27,7 @@
                         <input type="text" class="form-control" ng-change="GetSeoTitle()" ng-maxlength="256" required name="name" ng-model="product.Name">
                         <span ng-show="frmAddProduct.name.$invalid" class="has-error">Phải nhập tên danh mục</span>
                         <span ng-show="frmAddProduct.name.$error.maxlength" class="has-error">Tên danh mục chỉ được 256 ký tự</span>
+
                     </div>
                 </div>
                 <div class="form-group">
@@ -35,6 +36,7 @@
                         <input type="text" class="form-control" name="alias" required ng-model="product.Alias">
                         <span ng-show="frmAddProduct.alias.$invalid" class="has-error">Phải nhập tiêu đề SEO</span>
                         <span ng-show="frmAddProduct.alias.$error.maxlength" class="has-error">Tiêu đề SEO chỉ được 256 ký tự</span>
+
 
                     </div>
                 </div>
@@ -52,6 +54,7 @@
                             <option value="">Chọn danh mục</option>
                         </select>
                         <span ng-show="frmAddProduct.CategoryID.$invalid" class="has-error">Phải chọn danh mục</span>
+
                         <input type="hidden" name="parentId" ng-model="product.CategoryID" />
                     </div>
                 </div>

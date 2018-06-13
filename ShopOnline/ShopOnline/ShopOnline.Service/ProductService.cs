@@ -1,12 +1,8 @@
-﻿using ShopOnline.Data.Infrastructure;
+﻿using System.Collections.Generic;
+using ShopOnline.Common;
+using ShopOnline.Data.Infrastructure;
 using ShopOnline.Data.Repositories;
 using ShopOnline.Model.Models;
-using ShopOnline.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShopOnline.Service
 {
