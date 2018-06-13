@@ -1,12 +1,10 @@
-﻿using ShopOnline.Data.Infrastructure;
-using ShopOnline.Data.Repositories;
-using ShopOnline.Model.Models;
-using ShopOnline.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ShopOnline.Common;
+using ShopOnline.Data.Infrastructure;
+using ShopOnline.Data.Repositories;
+using ShopOnline.Model.Models;
 
 namespace ShopOnline.Service
 {
@@ -21,6 +19,12 @@ namespace ShopOnline.Service
         IEnumerable<Product> GetAll();
 
         IEnumerable<Product> GetAll(string keyword);
+
+        IEnumerable<Product> GetLastest(int top);
+
+        IEnumerable<Product> GetHotProduct(int top);
+
+        IEnumerable<Product> GetListProductByCategoryIdPaging(int categoryId, int page, int pageSize, out int totalRow);
 
         Product GetById(int id);
 
@@ -48,9 +52,9 @@ namespace ShopOnline.Service
         {
             var product = _productRepository.Add(Product);
             _unitOfWork.Commit();
-            if (!string.IsNullOrEmpty(Product.Tags))
+            if (!string.IsNullOrEmpty(product.Tags))
             {
-                string[] tags = Product.Tags.Split(',');
+                string[] tags = product.Tags.Split(',');
                 for (var i = 0; i < tags.Length; i++)
                 {
                     var tagId = StringHelper.ToUnsignString(tags[i]);
@@ -125,6 +129,26 @@ namespace ShopOnline.Service
                 }
 
             }
+        }
+
+        public IEnumerable<Product> GetLastest(int top)
+        {
+            return _productRepository.GetMulti(x => x.Status).OrderByDescending(x => x.CreatedDate).Take(top);
+        }
+
+        public IEnumerable<Product> GetHotProduct(int top)
+        {
+            return _productRepository.GetMulti(x => x.Status && x.HotFlag == true).OrderByDescending(x => x.CreatedDate).Take(top);
+
+        }
+
+        public IEnumerable<Product> GetListProductByCategoryIdPaging(int categoryId, int page, int pageSize, out int totalRow)
+        {
+            var query = _productRepository.GetMulti(x => x.Status && x.CategoryID == categoryId);
+
+            totalRow = query.Count();
+
+            return query.Skip((page - 1) * pageSize).Take(pageSize);
         }
     }
 }

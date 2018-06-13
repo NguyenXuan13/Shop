@@ -76,9 +76,13 @@
     <Compile Include="Migrations\201806082310427_Intergrate-AspnetIdentity.Designer.cs">
       <DependentUpon>201806082310427_Intergrate-AspnetIdentity.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806131432406_AddTagField.cs" />
-    <Compile Include="Migrations\201806131432406_AddTagField.Designer.cs">
-      <DependentUpon>201806131432406_AddTagField.cs</DependentUpon>
+    <Compile Include="Migrations\201806102047300_AddContentToSlide.cs" />
+    <Compile Include="Migrations\201806102047300_AddContentToSlide.Designer.cs">
+      <DependentUpon>201806102047300_AddContentToSlide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806111542091_AddTagField.cs" />
+    <Compile Include="Migrations\201806111542091_AddTagField.Designer.cs">
+      <DependentUpon>201806111542091_AddTagField.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,8 +130,11 @@
     <EmbeddedResource Include="Migrations\201806082310427_Intergrate-AspnetIdentity.resx">
       <DependentUpon>201806082310427_Intergrate-AspnetIdentity.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806131432406_AddTagField.resx">
-      <DependentUpon>201806131432406_AddTagField.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806102047300_AddContentToSlide.resx">
+      <DependentUpon>201806102047300_AddContentToSlide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806111542091_AddTagField.resx">
+      <DependentUpon>201806111542091_AddTagField.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
