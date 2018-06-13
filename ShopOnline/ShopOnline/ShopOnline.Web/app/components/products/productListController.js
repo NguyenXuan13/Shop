@@ -28,7 +28,7 @@
                     checkedProducts: JSON.stringify(listId)
                 }
             }
-            apiService.del('api/product/deletemulti', config, function (result) {
+            apiService.del('/api/product/deletemulti', config, function (result) {
                 notificationService.displaySuccess('Xóa thành công ' + result.data + ' bản ghi.');
                 search();
             }, function (error) {
@@ -68,7 +68,7 @@
                         id: id
                     }
                 }
-                apiService.del('api/product/delete', config, function () {
+                apiService.del('/api/product/delete', config, function () {
                     notificationService.displaySuccess('Xóa thành công');
                     search();
                 }, function () {
@@ -90,7 +90,7 @@
                     pageSize: 20
                 }
             }
-            apiService.get('api/product/getall', config, function (result) {
+            apiService.get('/api/product/getall', config, function (result) {
                 if (result.data.TotalCount == 0) {
                     notificationService.displayWarning('Không có bản ghi nào được tìm thấy.');
                 }
