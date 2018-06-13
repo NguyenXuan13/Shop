@@ -43,8 +43,6 @@ namespace ShopOnline.Model.Models
         public int? ViewCount { set; get; }
         public string Tags { set; get; }
 
-        public string Tags { set; get; }
-
         [ForeignKey("CategoryID")]
         public virtual ProductCategory ProductCategory { set; get; }
     }
