@@ -341,19 +341,6 @@
     <Content Include="Assets\admin\libs\angular-sanitize\angular-sanitize.js" />
     <Content Include="Assets\admin\libs\angular-sanitize\angular-sanitize.min.js" />
     <Content Include="Assets\admin\libs\angular-sanitize\index.js" />
-    <Content Include="Assets\admin\libs\angular-ui-router\release\angular-ui-router.js" />
-    <Content Include="Assets\admin\libs\angular-ui-router\release\angular-ui-router.min.js" />
-    <Content Include="Assets\admin\libs\angular-ui-router\src\common.js" />
-    <Content Include="Assets\admin\libs\angular-ui-router\src\resolve.js" />
-    <Content Include="Assets\admin\libs\angular-ui-router\src\state.js" />
-    <Content Include="Assets\admin\libs\angular-ui-router\src\stateDirectives.js" />
-    <Content Include="Assets\admin\libs\angular-ui-router\src\stateFilters.js" />
-    <Content Include="Assets\admin\libs\angular-ui-router\src\templateFactory.js" />
-    <Content Include="Assets\admin\libs\angular-ui-router\src\urlMatcherFactory.js" />
-    <Content Include="Assets\admin\libs\angular-ui-router\src\urlRouter.js" />
-    <Content Include="Assets\admin\libs\angular-ui-router\src\view.js" />
-    <Content Include="Assets\admin\libs\angular-ui-router\src\viewDirective.js" />
-    <Content Include="Assets\admin\libs\angular-ui-router\src\viewScroll.js" />
     <Content Include="Assets\admin\libs\angular-ui-select\dist\select.css" />
     <Content Include="Assets\admin\libs\angular-ui-select\dist\select.js" />
     <Content Include="Assets\admin\libs\angular-ui-select\dist\select.min.css" />
@@ -5182,12 +5169,6 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\admin\libs\angular-ui-router\.bower.json" />
-    <Content Include="Assets\admin\libs\angular-ui-router\bower.json" />
-    <Content Include="Assets\admin\libs\angular-ui-router\CHANGELOG.md" />
-    <Content Include="Assets\admin\libs\angular-ui-router\CONTRIBUTING.md" />
-    <Content Include="Assets\admin\libs\angular-ui-router\LICENSE" />
-    <Content Include="Assets\admin\libs\angular-ui-router\README.md" />
     <Content Include="Assets\admin\libs\angular\.bower.json" />
     <Content Include="Assets\admin\libs\angular\angular.min.js.gzip" />
     <Content Include="Assets\admin\libs\angular\angular.min.js.map" />
@@ -5663,7 +5644,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51580</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
