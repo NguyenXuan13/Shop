@@ -12,7 +12,7 @@
         $scope.AddProductCategory = AddProductCategory;
 
         function AddProductCategory() {
-            apiService.post('api/productcategory/create', $scope.productCategory,
+            apiService.post('/api/productcategory/create', $scope.productCategory,
                 function (result) {
                     notificationService.displaySuccess(result.data.Name + ' đã được thêm mới.');
                     $state.go('product_categories');
@@ -21,7 +21,7 @@
                 });
         }
         function loadParentCategory() {
-            apiService.get('api/productcategory/getallparents', null, function (result) {
+            apiService.get('/api/productcategory/getallparents', null, function (result) {
                 $scope.parentCategories = result.data;
             }, function () {
                 console.log('Cannot get list parent');
