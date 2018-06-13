@@ -69,10 +69,6 @@
       <Project>{b102bb72-310e-4442-9ff3-04e04bd3c291}</Project>
       <Name>ShopOnline.Service</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ShopOnline.Web\ShopOnline.Web.csproj">
-      <Project>{7e3f9edc-158e-4c96-a36b-272106a56999}</Project>
-      <Name>ShopOnline.Web</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
