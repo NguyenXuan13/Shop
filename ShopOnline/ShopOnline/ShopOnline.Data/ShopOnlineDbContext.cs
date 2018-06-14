@@ -44,5 +44,7 @@ namespace ShopOnline.Data
             builder.Entity<IdentityUserRole>().HasKey(i => new { i.UserId, i.RoleId });
             builder.Entity<IdentityUserLogin>().HasKey(i => i.UserId);
         }
+
+        
     }
 }
