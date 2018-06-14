@@ -133,9 +133,6 @@
     <EmbeddedResource Include="Migrations\201806131432406_AddTagField.resx">
       <DependentUpon>201806131432406_AddTagField.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806132244577_AddContentToSlide.resx">
-      <DependentUpon>201806132244577_AddContentToSlide.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
