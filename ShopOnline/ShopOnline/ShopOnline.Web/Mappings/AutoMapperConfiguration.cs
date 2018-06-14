@@ -15,7 +15,8 @@ namespace ShopOnline.Web.Mappings
             Mapper.CreateMap<ProductCategory, ProductCategoryViewModel>();
             Mapper.CreateMap<Product, ProductViewModel>();
             Mapper.CreateMap<ProductTag, ProductTagViewModel>();
-            Mapper.CreateMap<Footer, FooterViewModel>(); ;
+            Mapper.CreateMap<Footer, FooterViewModel>();
+            Mapper.CreateMap<Slide, SlideViewModel>();
         }
     }
 }
