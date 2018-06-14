@@ -18,14 +18,14 @@
         }
 
         function loadProductDetail() {
-            apiService.get('api/product/getbyid/' + $stateParams.id, null, function (result) {
+            apiService.get('/api/product/getbyid/' + $stateParams.id, null, function (result) {
                 $scope.product = result.data;
             }, function (error) {
                 notificationService.displayError(error.data);
             });
         }
         function UpdateProduct() {
-            apiService.put('api/product/update', $scope.product,
+            apiService.put('/api/product/update', $scope.product,
                 function (result) {
                     notificationService.displaySuccess(result.data.Name + ' đã được cập nhật.');
                     $state.go('products');
@@ -34,7 +34,7 @@
                 });
         }
         function loadProductCategory() {
-            apiService.get('api/productcategory/getallparents', null, function (result) {
+            apiService.get('/api/productcategory/getallparents', null, function (result) {
                 $scope.productCategories = result.data;
             }, function () {
                 console.log('Cannot get list parent');
