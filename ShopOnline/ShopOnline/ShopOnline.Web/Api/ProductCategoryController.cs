@@ -167,7 +167,6 @@ namespace ShopOnline.Web.Api
                 return response;
             });
         }
-
         [Route("deletemulti")]
         [HttpDelete]
         [AllowAnonymous]
@@ -196,6 +195,5 @@ namespace ShopOnline.Web.Api
                 return response;
             });
         }
-
     }
 }
