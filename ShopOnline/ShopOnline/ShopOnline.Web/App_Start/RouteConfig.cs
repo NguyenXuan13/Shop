@@ -8,6 +8,13 @@ namespace ShopOnline.Web
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapRoute(
+      name: "Search",
+      url: "tim-kiem.html",
+      defaults: new { controller = "Product", action = "Search", id = UrlParameter.Optional },
+      namespaces: new string[] { "ShopOnline.Web.Controllers" }
+);
             routes.MapRoute(
          name: "Login",
          url: "dang-nhap.html",
@@ -15,10 +22,11 @@ namespace ShopOnline.Web
          namespaces: new string[] { "ShopOnline.Web.Controllers" }
      );
             routes.MapRoute(
-           name: "About",
-           url: "gioi-thieu.html",
-           defaults: new { controller = "About", action = "Index", id = UrlParameter.Optional },
+           name: "Page",
+           url: "trang/{alias}.html",
+           defaults: new { controller = "Page", action = "Index", alias = UrlParameter.Optional },
            namespaces: new string[] { "ShopOnline.Web.Controllers" }
+
        );
             routes.MapRoute(
              name: "Product Category",
@@ -33,6 +41,12 @@ namespace ShopOnline.Web
              defaults: new { controller = "Product", action = "Detail", productId = UrlParameter.Optional },
                namespaces: new string[] { "ShopOnline.Web.Controllers" }
          );
+            routes.MapRoute(
+             name: "TagList",
+             url: "tag/{tagId}.html",
+             defaults: new { controller = "Product", action = "ListByTag", tagId = UrlParameter.Optional },
+               namespaces: new string[] { "ShopOnline.Web.Controllers" }
+);
 
             routes.MapRoute(
                 name: "Default",

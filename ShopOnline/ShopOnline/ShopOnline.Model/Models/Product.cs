@@ -1,4 +1,5 @@
 ﻿using ShopOnline.Model.Abstract;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -44,7 +45,11 @@ namespace ShopOnline.Model.Models
         public string Tags { set; get; }
         public int Quantity { set; get; }
 
+        public int? Quantity { set; get; }
+
         [ForeignKey("CategoryID")]
         public virtual ProductCategory ProductCategory { set; get; }
+
+        public virtual IEnumerable<ProductTag> ProductTags { set; get; }
     }
 }

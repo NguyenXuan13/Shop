@@ -1,56 +1,40 @@
 ﻿@model ShopOnline.Web.Infrastructure.Core.PaginationSet<ShopOnline.Web.Models.ProductViewModel>
 
 @{
-    var category = (ShopOnline.Web.Models.ProductCategoryViewModel)ViewBag.Category;
-    var pageIndex = Model.Page;
-    ViewBag.Title = pageIndex == 1 ? category.Name : category.Name + " - Trang " + pageIndex;
-    ViewBag.MetaKeyword = pageIndex == 1 ? category.MetaKeyword : category.MetaKeyword + " - Trang " + pageIndex;
-    ViewBag.MetaDescription = pageIndex == 1 ? category.MetaDescription : category.MetaDescription + " - Trang " + pageIndex;
+    var tag = (ShopOnline.Web.Models.TagViewModel)ViewBag.Tag;
+    ViewBag.Title = "Kết quả tìm kiếm cho tag " + tag.Name;
     Layout = "~/Views/Shared/Layouts.cshtml";
-
 }
 <div class="women-product">
-    <div class="w_content">
-        <div class="women">
-            <a href="/@(category.Alias).pc-@(category.ID).html"><h4>@category.Name - <span>@Model.TotalCount sản phẩm</span> </h4></a>
-            <ul class="w_nav">
-                <li>Sắp xếp : </li>
-                <li><a class="active" href="?page=@Model.Page&sort=popular">Phổ biến</a></li> |
-                <li><a href="?page=@Model.Page&sort=new">Mới </a></li> |
-                <li><a href="?page=@Model.Page&sort=discount">Khuyến mãi</a></li> |
-                <li><a href="?page=@Model.Page&sort=price">Giá: Thấp -> Cao </a></li>
-                <div class="clearfix"></div>
-            </ul>
-            <div class="clearfix"> </div>
-        </div>
-    </div>
-
     @if (Model.Count > 0)
     {
+        <div class="w_content">
+            <div class="women">
+                <a href=""><h4>Tag: @tag.Name - <span>@Model.TotalCount sản phẩm</span> </h4></a>
+
+                <div class="clearfix"> </div>
+            </div>
+        </div>
 
         <div class="grid-product">
             @foreach (var product in Model.Items)
             {
-                var url = "/" + product.Alias + ".p-" + product.ID + ".html";
-                <div class="product-grid" style="height:300px; width: 23%; margin: 1%;">
-                    <div class="content_box" style="height:70%; margin:1%">
+                var url = "/" + product.Alias + ".p-" + product.ID;
+                <div class="product-grid">
+                    <div class="content_box">
                         <a href="@url">
-                            <div class="left-grid-view grid-view-left" style="height:95%; width:95%; margin:auto">
-                                <img src="@product.Image" style="height:95%; width:95%; margin:auto" class="img-responsive watch-right" alt="@product.Name" />
+                            <div class="left-grid-view grid-view-left">
+                                <img src="@product.Image" class="img-responsive watch-right" alt="@product.Name" />
                                 <div class="mask">
                                     <div class="info">Xem nhanh</div>
                                 </div>
                             </div>
                         </a>
                     </div>
-                        <div class="clearfix"></div>
-                        <h4><a href="@url">@product.Name</a></h4>
-                        <p style="height:10%; margin:2px">@product.Description</p>
-                        @(product.Price == 0 ? "Liên hệ" : product.Price.ToString("N2"))
-                        <a class="now-get get-cart" href="@url">Mua hàng</a>
-                    
+                    <h4><a href="@url">@product.Name</a></h4>
+                    <p>@product.Description</p>
+                    @(product.Price == 0 ? "Liên hệ" : product.Price.ToString("N2"))
                 </div>
-
             }
             <div class="clearfix"> </div>
             @if (Model.TotalPages > 1)

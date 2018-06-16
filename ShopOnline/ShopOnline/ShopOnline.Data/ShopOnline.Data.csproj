@@ -88,9 +88,21 @@
     <Compile Include="Migrations\201806131720396_changedata.Designer.cs">
       <DependentUpon>201806131720396_changedata.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806161727071_addColumnQUantity.cs" />
-    <Compile Include="Migrations\201806161727071_addColumnQUantity.Designer.cs">
-      <DependentUpon>201806161727071_addColumnQUantity.cs</DependentUpon>
+    <Compile Include="Migrations\201806152030303_addchangedata.cs" />
+    <Compile Include="Migrations\201806152030303_addchangedata.Designer.cs">
+      <DependentUpon>201806152030303_addchangedata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806152256189_AddMoreQuantity.cs" />
+    <Compile Include="Migrations\201806152256189_AddMoreQuantity.Designer.cs">
+      <DependentUpon>201806152256189_AddMoreQuantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806161401271_change.cs" />
+    <Compile Include="Migrations\201806161401271_change.Designer.cs">
+      <DependentUpon>201806161401271_change.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806161524246_addforeignkey.cs" />
+    <Compile Include="Migrations\201806161524246_addforeignkey.Designer.cs">
+      <DependentUpon>201806161524246_addforeignkey.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -147,8 +159,17 @@
     <EmbeddedResource Include="Migrations\201806131720396_changedata.resx">
       <DependentUpon>201806131720396_changedata.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806161727071_addColumnQUantity.resx">
-      <DependentUpon>201806161727071_addColumnQUantity.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806152030303_addchangedata.resx">
+      <DependentUpon>201806152030303_addchangedata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806152256189_AddMoreQuantity.resx">
+      <DependentUpon>201806152256189_AddMoreQuantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806161401271_change.resx">
+      <DependentUpon>201806161401271_change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806161524246_addforeignkey.resx">
+      <DependentUpon>201806161524246_addforeignkey.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

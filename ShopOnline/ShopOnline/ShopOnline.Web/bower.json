@@ -10,7 +10,8 @@
     "angular-ui-router": "~1.0.18",
     "angular-ui-select": "~0.19.6",
     "bootbox": "~4.4.0",
-    "bootstrap": "~3.3.6",
+    "bootstrap": "~3.3.7",
+    
     "checklist-model": "~1.0.0",
     "ckeditor": "~4.5.9",
     "fastclick": "~1.0.6",

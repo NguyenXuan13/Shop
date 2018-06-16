@@ -250,8 +250,8 @@ ul.cute li{
 	border: 1px solid #ddd;
 }
 .sub-cate{
-	width: 27%;
-	margin: 2em 2em 0 0;
+	width: 25%;
+	margin: 2% 2% 0 0;
 }
 .banner-off{
 	
@@ -578,14 +578,16 @@ p.m_text {
 	cursor: pointer;
 	position: relative;
 	line-height: 0px;
+    width:150px;
+	height:200px;
 }
 .nbs-flexisel-item > img {
 	cursor: pointer;
 	position: relative;
 	margin-top:10px;
 	margin-bottom: 10px;
-	max-width:150px;
-	max-height:500px;
+	width:160px;
+	height:200px;
 }
 .grid-flex{
 	margin:10px 0 20px 0;
@@ -600,7 +602,7 @@ p.m_text {
 .nbs-flexisel-item p {
 	color: #000;
 	font-size: 0.85em;
-	padding-top: 25px;
+	padding-top: 5px;
 }
 .nbs-flexisel-item > img {
 	cursor: pointer;
@@ -631,7 +633,7 @@ p.m_text {
 /*--product--*/
 /*-- start w_content --*/
 .women-product,.account_grid,.register,.single_top,.main{
-	width: 70%;
+	width: 72%;
 	float: right;
 }
 .women_main{
@@ -685,7 +687,7 @@ p.m_text {
 	font-size: 0.8125em;
 	color:#777777;
 	line-height: 1.5em;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 }
 .content_box-grid {
 	margin-top: 1em;
