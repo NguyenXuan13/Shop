@@ -578,14 +578,16 @@ p.m_text {
 	cursor: pointer;
 	position: relative;
 	line-height: 0px;
+    width:150px;
+	height:200px;
 }
 .nbs-flexisel-item > img {
 	cursor: pointer;
 	position: relative;
 	margin-top:10px;
 	margin-bottom: 10px;
-	max-width:150px;
-	max-height:500px;
+	width:160px;
+	height:200px;
 }
 .grid-flex{
 	margin:10px 0 20px 0;
@@ -600,7 +602,7 @@ p.m_text {
 .nbs-flexisel-item p {
 	color: #000;
 	font-size: 0.85em;
-	padding-top: 25px;
+	padding-top: 5px;
 }
 .nbs-flexisel-item > img {
 	cursor: pointer;
