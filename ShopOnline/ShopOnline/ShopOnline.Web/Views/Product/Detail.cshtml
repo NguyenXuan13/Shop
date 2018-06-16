@@ -121,7 +121,7 @@
         @foreach (var product in relatedProducts)
         {
             <li style=" height:300px">
-                <img src="@product.Image" /><div class="grid-flex">
+                <img src="@product.Image" style="height:200px;"/><div class="grid-flex">
                     <a href="/@(product.Alias).p-@(product.ID).html"><h4>@product.Name</h4></a>
 
                     <p>@product.Price đ</p>

@@ -72,7 +72,13 @@
         {
             if (context.Footers.Count(x => x.ID == CommonConstants.DefaultFooterId) == 0)
             {
-                string Content = "";
+                string content = "Footer";
+                context.Footers.Add(new Footer()
+                {
+                    ID = CommonConstants.DefaultFooterId,
+                    Content = content
+                });
+                context.SaveChanges();
             }
         }
 
