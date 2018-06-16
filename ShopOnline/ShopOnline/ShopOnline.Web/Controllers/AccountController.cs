@@ -101,7 +101,7 @@ namespace ShopOnline.Web.Controllers
         }
 
         [HttpPost]
-        [CaptchaValidation("CaptchaCode", "registerCaptcha", "Mã xác nhận không đúng")]
+        
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
@@ -137,9 +137,9 @@ namespace ShopOnline.Web.Controllers
                 if (adminUser != null)
                     await _userManager.AddToRolesAsync(adminUser.Id, new string[] { "User" });
 
-                string content = System.IO.File.ReadAllText(Server.MapPath("/Assets/client/template/newuser.html"));
-                content = content.Replace("{{UserName}}", adminUser.FullName);
-                content = content.Replace("{{Link}}", ConfigHelper.GetByKey("CurrentLink") + "dang-nhap.html");
+                //string content = System.IO.File.ReadAllText(Server.MapPath("/Assets/client/template/newuser.html"));
+                //content = content.Replace("{{UserName}}", adminUser.FullName);
+                //content = content.Replace("{{Link}}", ConfigHelper.GetByKey("CurrentLink") + "dang-nhap.html");
 
                 //MailHelper.SendMail(adminUser.Email, "Đăng ký thành công", content);
 

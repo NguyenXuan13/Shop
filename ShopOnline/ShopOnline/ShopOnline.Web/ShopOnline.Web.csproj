@@ -244,7 +244,7 @@
     <Content Include="Assets\admin\libs\bootstrap\package.js" />
     <Content Include="Assets\client\css\custom.css" />
     <Content Include="Assets\client\js\Common.js" />
-    <Content Include="Assets\client\js\Controller\ShoppingCart.js" />
+    <Content Include="Assets\client\js\ShoppingCart.js" />
     <Content Include="Assets\client\template\newuser.html" />
     <Content Include="ConnectionStrings.config" />
   </ItemGroup>

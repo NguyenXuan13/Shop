@@ -1,10 +1,10 @@
 ﻿@model ShopOnline.Web.Models.RegisterViewModel
-@using BotDetect.Web.Mvc;
+
 @{
     ViewBag.Title = "Register";
     Layout = "~/Views/Shared/Layouts.cshtml";
 }
-<link href="@BotDetect.Web.CaptchaUrls.Absolute.LayoutStyleSheetUrl" rel="stylesheet" type="text/css" />
+
 <div class="register">
     @using (Html.BeginForm("Register", "Account", FormMethod.Post))
     {
@@ -33,14 +33,7 @@
                 <span>Tài khoản<label>*</label></span>
                 @Html.TextBoxFor(model => model.UserName)
                 <span>Mật khẩu<label>*</label></span>
-                @Html.PasswordFor(model => model.Password)
-
-                @{
-                    MvcCaptcha registerCaptcha = new MvcCaptcha("registerCaptcha");
-                }
-                @Html.Captcha(registerCaptcha)
-                @Html.TextBox("CaptchaCode")
-
+                @Html.PasswordFor(model => model.Password)                
             </div>
             <div class="clearfix"> </div>
         </div>
