@@ -88,25 +88,23 @@
     <Compile Include="Migrations\201806131720396_changedata.Designer.cs">
       <DependentUpon>201806131720396_changedata.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806152030303_addchangedata.cs" />
-    <Compile Include="Migrations\201806152030303_addchangedata.Designer.cs">
-      <DependentUpon>201806152030303_addchangedata.cs</DependentUpon>
+    <Compile Include="Migrations\201806161749188_Trong.cs" />
+    <Compile Include="Migrations\201806161749188_Trong.Designer.cs">
+      <DependentUpon>201806161749188_Trong.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806152256189_AddMoreQuantity.cs" />
-    <Compile Include="Migrations\201806152256189_AddMoreQuantity.Designer.cs">
-      <DependentUpon>201806152256189_AddMoreQuantity.cs</DependentUpon>
+    <Compile Include="Migrations\201806161802589_addContactDetailTable.cs" />
+    <Compile Include="Migrations\201806161802589_addContactDetailTable.Designer.cs">
+      <DependentUpon>201806161802589_addContactDetailTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806161401271_change.cs" />
-    <Compile Include="Migrations\201806161401271_change.Designer.cs">
-      <DependentUpon>201806161401271_change.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201806161524246_addforeignkey.cs" />
-    <Compile Include="Migrations\201806161524246_addforeignkey.Designer.cs">
-      <DependentUpon>201806161524246_addforeignkey.cs</DependentUpon>
+    <Compile Include="Migrations\201806162007294_addFeedbackTable.cs" />
+    <Compile Include="Migrations\201806162007294_addFeedbackTable.Designer.cs">
+      <DependentUpon>201806162007294_addFeedbackTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ContactDetailRepository.cs" />
     <Compile Include="Repositories\ErrorRepository.cs" />
+    <Compile Include="Repositories\FeedbackRepository.cs" />
     <Compile Include="Repositories\FooterRepository.cs" />
     <Compile Include="Repositories\MenuGroupRepository.cs" />
     <Compile Include="Repositories\MenuRepository.cs" />
@@ -159,17 +157,14 @@
     <EmbeddedResource Include="Migrations\201806131720396_changedata.resx">
       <DependentUpon>201806131720396_changedata.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806152030303_addchangedata.resx">
-      <DependentUpon>201806152030303_addchangedata.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806161749188_Trong.resx">
+      <DependentUpon>201806161749188_Trong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806152256189_AddMoreQuantity.resx">
-      <DependentUpon>201806152256189_AddMoreQuantity.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806161802589_addContactDetailTable.resx">
+      <DependentUpon>201806161802589_addContactDetailTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806161401271_change.resx">
-      <DependentUpon>201806161401271_change.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806161524246_addforeignkey.resx">
-      <DependentUpon>201806161524246_addforeignkey.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806162007294_addFeedbackTable.resx">
+      <DependentUpon>201806162007294_addFeedbackTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

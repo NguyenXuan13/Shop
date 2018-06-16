@@ -24,6 +24,7 @@
             CreateSlide(context);
             CreatePage(context);
             CreateUser(context);
+            CreateContactDetail(context);
             //  This method will be called after migrating to the latest version.
         }
 
@@ -126,6 +127,42 @@
 
                     };
                     context.Pages.Add(page);
+                    context.SaveChanges();
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    foreach (var eve in ex.EntityValidationErrors)
+                    {
+                        Trace.WriteLine($"Entity of type \"{eve.Entry.Entity.GetType().Name}\" in state \"{eve.Entry.State}\" has the following validation error.");
+                        foreach (var ve in eve.ValidationErrors)
+                        {
+                            Trace.WriteLine($"- Property: \"{ve.PropertyName}\", Error: \"{ve.ErrorMessage}\"");
+                        }
+                    }
+                }
+
+            }
+        }
+        private void CreateContactDetail(ShopOnlineDbContext context)
+        {
+            if (context.ContactDetails.Count() == 0)
+            {
+                try
+                {
+                    var contactDetail = new ShopOnline.Model.Models.ContactDetail()
+                    {
+                        Name = "Cửa hàng điện lạnh Xuân Hoàng",
+                        Address = "Ngõ 56 Cổ Nhuế",
+                        Email = "xuannguyen71320@gmail.com",
+                        Lat = 21.0657715,
+                        Lng = 105.7765664,
+                        Phone = "0968207096",
+                        Website = "http://google.com.vn",
+                        Other = "",
+                        Status = true
+
+                    };
+                    context.ContactDetails.Add(contactDetail);
                     context.SaveChanges();
                 }
                 catch (DbEntityValidationException ex)
