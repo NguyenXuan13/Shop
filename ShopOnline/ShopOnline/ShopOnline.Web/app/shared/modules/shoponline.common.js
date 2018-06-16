@@ -3,5 +3,5 @@
         'ui.router',
         'ngBootbox',
         'ngCkeditor',
-        'LocalStorageModule'])
+        ])
 })();
