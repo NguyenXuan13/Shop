@@ -22,10 +22,11 @@ namespace ShopOnline.Web
          namespaces: new string[] { "ShopOnline.Web.Controllers" }
      );
             routes.MapRoute(
-           name: "About",
-           url: "gioi-thieu.html",
-           defaults: new { controller = "About", action = "Index", id = UrlParameter.Optional },
+           name: "Page",
+           url: "trang/{alias}.html",
+           defaults: new { controller = "Page", action = "Index", alias = UrlParameter.Optional },
            namespaces: new string[] { "ShopOnline.Web.Controllers" }
+
        );
             routes.MapRoute(
              name: "Product Category",
@@ -40,6 +41,12 @@ namespace ShopOnline.Web
              defaults: new { controller = "Product", action = "Detail", productId = UrlParameter.Optional },
                namespaces: new string[] { "ShopOnline.Web.Controllers" }
          );
+            routes.MapRoute(
+             name: "TagList",
+             url: "tag/{tagId}.html",
+             defaults: new { controller = "Product", action = "ListByTag", tagId = UrlParameter.Optional },
+               namespaces: new string[] { "ShopOnline.Web.Controllers" }
+);
 
             routes.MapRoute(
                 name: "Default",
