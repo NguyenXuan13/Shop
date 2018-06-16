@@ -5352,9 +5352,6 @@
     <Content Include="fonts\fontawesome-webfont.eot" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_Layout.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Product\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
