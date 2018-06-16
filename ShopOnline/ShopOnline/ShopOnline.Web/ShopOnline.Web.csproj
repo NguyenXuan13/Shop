@@ -3619,8 +3619,11 @@
     <Content Include="Assets\client\fontawesome-free-5.0.13\web-fonts-with-css\webfonts\fa-brands-400.svg" />
     <Content Include="Assets\client\fontawesome-free-5.0.13\web-fonts-with-css\webfonts\fa-regular-400.svg" />
     <Content Include="Assets\client\fontawesome-free-5.0.13\web-fonts-with-css\webfonts\fa-solid-900.svg" />
+    <Content Include="Assets\client\js\Common.js" />
     <Content Include="Assets\client\js\controllers\contact.js" />
+    <Content Include="Assets\client\js\Controller\ShoppingCart.js" />
     <Content Include="Assets\client\template\contact_template.html" />
+    <Content Include="Assets\client\template\newuser.html" />
     <Content Include="ConnectionStrings.config" />
   </ItemGroup>
   <ItemGroup>
@@ -8868,6 +8871,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Contact\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ShoppingCart\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
