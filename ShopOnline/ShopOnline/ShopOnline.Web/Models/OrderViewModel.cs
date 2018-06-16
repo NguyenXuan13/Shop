@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Web;
 
-namespace ShopOnline.Model.Models
+namespace ShopOnline.Web.Models
 {
-    [Table("Orders")]
-    public class Order
+    public class OrderViewModel
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { set; get; }
 
         [Required]
@@ -40,12 +38,9 @@ namespace ShopOnline.Model.Models
         public string PaymentStatus { set; get; }
         public bool Status { set; get; }
 
-        [StringLength(128)]
-        [Column(TypeName = "nvarchar")]
+        [MaxLength(128)]
         public string CustomerId { set; get; }
 
-        [ForeignKey("CustomerId")]
-        public virtual ApplicationUser User { set; get; }
-        public virtual IEnumerable<OrderDetail> OrderDetails { set; get; }
+        public IEnumerable<OrderDetailViewModel> OrderDetails { set; get; }
     }
 }
