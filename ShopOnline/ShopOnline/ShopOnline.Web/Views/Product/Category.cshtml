@@ -47,7 +47,7 @@
                         <h4><a href="@url">@product.Name</a></h4>
                         <p style="height:10%; margin:2px">@product.Description</p>
                         @(product.Price == 0 ? "Liên hệ" : product.Price.ToString("N2"))
-                        <a class="now-get get-cart" href="@url">Mua hàng</a>
+                    <a class="now-get get-cart" href="#" data-id="@product.ID" id="btnAddToCart">Mua hàng</a>
                     
                 </div>
 
