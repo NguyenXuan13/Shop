@@ -7,13 +7,13 @@ namespace ShopOnline.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class addContactDetailTable : IMigrationMetadata
+    public sealed partial class addData : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addContactDetailTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addData));
         
         string IMigrationMetadata.Id
         {
-            get { return "201806161802589_addContactDetailTable"; }
+            get { return "201806162224261_addData"; }
         }
         
         string IMigrationMetadata.Source

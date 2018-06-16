@@ -20,6 +20,7 @@ namespace ShopOnline.Web.Mappings
                 cfg.CreateMap<Footer, FooterViewModel>();
                 cfg.CreateMap<Slide, SlideViewModel>();
                 cfg.CreateMap<Page, PageViewModel>();
+                cfg.CreateMap<OrderDetail, OrderDetailViewModel>();
             });
         }
 
