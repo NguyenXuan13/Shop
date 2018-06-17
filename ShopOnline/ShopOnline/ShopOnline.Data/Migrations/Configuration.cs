@@ -36,25 +36,28 @@
 
             var user = new ApplicationUser()
             {
-                UserName = "hoang",
-                Email = "hoangtv.mta@gmail.com",
+                UserName = "shop2",
+                Email = "xuannguyen71320@gmail.com",
                 EmailConfirmed = true,
                 BirthDay = DateTime.Now,
-                FullName = "truong viet hoang"
+                FullName = "Shop"
 
             };
-
-            manager.Create(user, "zxc123");
-
-            if (!roleManager.Roles.Any())
+            if (manager.Users.Count(x => x.UserName == "shop2") == 0)
             {
-                roleManager.Create(new IdentityRole { Name = "Admin" });
-                roleManager.Create(new IdentityRole { Name = "User" });
+                manager.Create(user, "zxc123");
+
+                if (!roleManager.Roles.Any())
+                {
+                    roleManager.Create(new IdentityRole { Name = "Admin" });
+                    roleManager.Create(new IdentityRole { Name = "User" });
+                }
+
+                var adminUser = manager.FindByEmail("xuannguyen71320@gmail.com");
+
+                manager.AddToRoles(adminUser.Id, new string[] { "Admin", "User" });
             }
 
-            var adminUser = manager.FindByEmail("hoangtv.mta@gmail.com");
-
-            manager.AddToRoles(adminUser.Id, new string[] { "Admin", "User" });
         }
 
         private void CreateProductCategorySample(ShopOnline.Data.ShopOnlineDbContext context)
@@ -66,7 +69,7 @@
                 new ProductCategory() { Name="Điện lạnh",Alias="dien-lanh",Status=true },
                  new ProductCategory() { Name="Viễn thông",Alias="vien-thong",Status=true },
                   new ProductCategory() { Name="Đồ gia dụng",Alias="do-gia-dung",Status=true },
-                   new ProductCategory() { Name="Mỹ phẩm",Alias="my-pham",Status=true }
+                   new ProductCategory() { Name="Đồ điện",Alias="do-dien",Status=true }
             };
                 context.ProductCategories.AddRange(listProductCategory);
                 context.SaveChanges();
@@ -77,7 +80,13 @@
         {
             if (context.Footers.Count(x => x.ID == CommonConstants.DefaultFooterId) == 0)
             {
-                string Content = "";
+                string content = "Footer";
+                context.Footers.Add(new Footer()
+                {
+                    ID = CommonConstants.DefaultFooterId,
+                    Content = content
+                });
+                context.SaveChanges();
             }
         }
 

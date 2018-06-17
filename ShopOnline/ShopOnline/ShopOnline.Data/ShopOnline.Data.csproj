@@ -100,6 +100,14 @@
     <Compile Include="Migrations\201806162347064_trong.Designer.cs">
       <DependentUpon>201806162347064_trong.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806162046595_AddCustomerId.cs" />
+    <Compile Include="Migrations\201806162046595_AddCustomerId.Designer.cs">
+      <DependentUpon>201806162046595_AddCustomerId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806162112315_AddCustomerIdchange.cs" />
+    <Compile Include="Migrations\201806162112315_AddCustomerIdchange.Designer.cs">
+      <DependentUpon>201806162112315_AddCustomerIdchange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ContactDetailRepository.cs" />
@@ -165,6 +173,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806162347064_trong.resx">
       <DependentUpon>201806162347064_trong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806162046595_AddCustomerId.resx">
+      <DependentUpon>201806162046595_AddCustomerId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806162112315_AddCustomerIdchange.resx">
+      <DependentUpon>201806162112315_AddCustomerIdchange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
